@@ -242,9 +242,10 @@ let converterInstance: PaintConverter | null = null
 export async function loadConverter(): Promise<PaintConverter> {
   if (converterInstance) return converterInstance
 
+  const base = import.meta.env.BASE_URL
   const [paintsRes, linksRes] = await Promise.all([
-    fetch('/data/paints.json').then(r => r.json()),
-    fetch('/data/links.json').then(r => r.json()),
+    fetch(`${base}data/paints.json`).then(r => r.json()),
+    fetch(`${base}data/links.json`).then(r => r.json()),
   ])
 
   converterInstance = new PaintConverter(paintsRes, linksRes)
