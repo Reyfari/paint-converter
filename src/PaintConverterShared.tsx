@@ -1,3 +1,8 @@
+/**
+ * Shared paint converter module.
+ * This file is kept identical between Librarium and the standalone paint-converter-app.
+ * Do not add Librarium-specific imports or logic here.
+ */
 import { useState, useEffect, useRef } from 'react'
 
 // ── Types ────────────────────────────────────────────────────────────────────

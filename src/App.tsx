@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react'
 import { loadConverter, type PaintConverter } from './converter'
 import { generatePdf, type PdfGroupedEquiv, type PdfRow } from './PaintConverterPdf'
+// Shared module — kept in sync with Librarium (frontend/src/pages/).
+// Also used by: PaintConverterPdf.tsx. Sync targets: Shared, Pdf, CSS.
 import {
   type PaintResponse, type SelectedEntry,
   BRANDS, swatchStyle,

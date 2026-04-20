@@ -1,4 +1,5 @@
 import { Document, Page, View, Text, StyleSheet, pdf } from '@react-pdf/renderer'
+// Shared module — kept in sync with Librarium (frontend/src/pages/).
 import type { PaintResponse, PaintEquivalentResult } from './PaintConverterShared'
 
 export interface PdfGroupedEquiv {
