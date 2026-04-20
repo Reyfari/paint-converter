@@ -266,7 +266,7 @@ export default function App() {
       {checkedEntries.some(e => e.result) && (
         <div className="pc-disclaimer-footer">
           <p><strong>Cross-brand equivalences</strong> are sourced from vendor-published conversion charts (Army Painter, Two Thin Coats, Vallejo). These represent the vendors' own stated equivalences. Always compare in person before committing to a project.</p>
-          <p><strong>Direct</strong> matches come from a single conversion chart entry. <strong>Derived</strong> matches are inferred by chaining two entries (A > B > C) and carry more uncertainty.</p>
+          <p><strong>Direct</strong> matches come from a single conversion chart entry. <strong>Derived</strong> matches are inferred by chaining two entries (A {'>'} B {'>'} C) and carry more uncertainty.</p>
         </div>
       )}
 
