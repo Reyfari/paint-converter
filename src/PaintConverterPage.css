@@ -12,7 +12,6 @@
 /* Multi-select search */
 .pc-multi-wrap {
   position: relative;
-  max-width: 600px;
   margin-bottom: 1rem;
 }
 
@@ -231,6 +230,21 @@
   font-size: 0.75rem;
   color: var(--text-muted);
   font-family: monospace;
+}
+
+/* Owned indicators */
+.pc-owned-dot {
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.pc-owned-badge {
+  font-size: 0.7rem;
+  background: var(--accent-dim);
+  color: var(--accent-hover);
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
 }
 
 /* Badges */

@@ -163,6 +163,7 @@ export default function App() {
   return (
     <div className="pc-page">
       <div className="page-header">
+        <p className="pc-project-from">From Project Librarium</p>
         <div className="pc-header-row">
           <div>
             <h2>Paint Converter</h2>
@@ -268,6 +269,11 @@ export default function App() {
           <p><strong>Direct</strong> matches come from a single conversion chart entry. <strong>Derived</strong> matches are inferred by chaining two entries (A→B→C) and carry more uncertainty.</p>
         </div>
       )}
+
+      <footer className="pc-footer">
+        <p className="pc-footer-brand">Project Librarium</p>
+        <p className="pc-footer-desc">An AI-powered workshop for managing miniature painting projects (in development).</p>
+      </footer>
     </div>
   )
 }

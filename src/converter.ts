@@ -108,9 +108,15 @@ export class PaintConverter {
 
   search(query: string): PaintData[] {
     const q = query.toLowerCase()
-    return Array.from(this.paintsById.values())
+    const matches = Array.from(this.paintsById.values())
       .filter(p => p.name.toLowerCase().includes(q))
-      .slice(0, 50)
+    matches.sort((a, b) => {
+      const aPrefix = a.name.toLowerCase().startsWith(q) ? 0 : 1
+      const bPrefix = b.name.toLowerCase().startsWith(q) ? 0 : 1
+      if (aPrefix !== bPrefix) return aPrefix - bPrefix
+      return a.name.toLowerCase().localeCompare(b.name.toLowerCase())
+    })
+    return matches.slice(0, 50)
   }
 
   getPaint(id: number): PaintData | undefined {
