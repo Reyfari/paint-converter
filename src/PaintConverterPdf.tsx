@@ -180,7 +180,7 @@ function PdfDocument({ data }: { data: PdfExportData }) {
 
         <View style={s.footer}>
           <Text style={s.footerBrand}>Project Librarium</Text>
-          <Text style={s.footerDesc}>An AI-powered workshop for managing miniature painting projects.</Text>
+          <Text style={s.footerDesc}>An AI-powered workshop for managing miniature painting projects (in development).</Text>
         </View>
       </Page>
     </Document>
