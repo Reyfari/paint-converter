@@ -6,4 +6,4 @@ Search for a paint, and the converter shows you cross-brand equivalents sourced 
 
 Runs entirely in the browser — no backend, no accounts, no tracking.
 
-**From [Project Librarium](https://github.com/Reyfari)** — an AI-powered workshop for managing miniature painting projects (in development).
+**From Project Librarium** — an AI-powered workshop for managing miniature painting projects (in development).
