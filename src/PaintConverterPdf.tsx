@@ -174,7 +174,7 @@ function PdfDocument({ data }: { data: PdfExportData }) {
             <Text style={s.disclaimerBold}>Cross-brand equivalences</Text> are sourced from vendor-published conversion charts (Army Painter, Two Thin Coats, Vallejo). These charts represent the vendors' own stated equivalences between their ranges and competitor products. They are not independent assessments — trust the vendor's intent, but always compare in person before committing to a project.
           </Text>
           <Text style={s.disclaimerText}>
-            <Text style={s.disclaimerBold}>Direct</Text> matches come from a single conversion chart entry. <Text style={s.disclaimerBold}>Derived</Text> matches are inferred by chaining two chart entries (A > B > C) and carry more uncertainty.
+            <Text style={s.disclaimerBold}>Direct</Text> matches come from a single conversion chart entry. <Text style={s.disclaimerBold}>Derived</Text> matches are inferred by chaining two chart entries (A {'>'} B {'>'} C) and carry more uncertainty.
           </Text>
         </View>
 
