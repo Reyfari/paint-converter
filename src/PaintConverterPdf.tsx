@@ -61,6 +61,12 @@ const s = StyleSheet.create({
   disclaimer: { borderTopWidth: 0.5, borderTopColor: '#ddd', paddingTop: 10 },
   disclaimerText: { fontSize: 7, color: '#555', lineHeight: 1.5, marginBottom: 4 },
   disclaimerBold: { fontFamily: 'Helvetica-Bold', color: '#333' },
+
+  // Branding
+  projectFrom: { fontSize: 7, fontFamily: 'Helvetica-Bold', color: '#276d3a', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 2 },
+  footer: { borderTopWidth: 0.5, borderTopColor: '#ddd', paddingTop: 8, marginTop: 10, alignItems: 'center' },
+  footerBrand: { fontSize: 8, fontFamily: 'Helvetica-Bold', color: '#333' },
+  footerDesc: { fontSize: 6.5, color: '#888', fontStyle: 'italic', marginTop: 2 },
 })
 
 // ── Components ────────────────────────────────────────────────────────────────
@@ -114,8 +120,9 @@ function PdfDocument({ data }: { data: PdfExportData }) {
   return (
     <Document>
       <Page size="A4" style={s.page}>
+        <Text style={s.projectFrom}>From Project Librarium</Text>
         <Text style={s.title}>Paint Converter Results</Text>
-        <Text style={s.subtitle}>Generated {today} · Librarium Paint Converter</Text>
+        <Text style={s.subtitle}>Generated {today}</Text>
 
         <View style={s.table}>
           {/* Header */}
@@ -169,6 +176,11 @@ function PdfDocument({ data }: { data: PdfExportData }) {
           <Text style={s.disclaimerText}>
             <Text style={s.disclaimerBold}>Direct</Text> matches come from a single conversion chart entry. <Text style={s.disclaimerBold}>Derived</Text> matches are inferred by chaining two chart entries (A→B→C) and carry more uncertainty.
           </Text>
+        </View>
+
+        <View style={s.footer}>
+          <Text style={s.footerBrand}>Project Librarium</Text>
+          <Text style={s.footerDesc}>An AI-powered workshop for managing miniature painting projects.</Text>
         </View>
       </Page>
     </Document>
